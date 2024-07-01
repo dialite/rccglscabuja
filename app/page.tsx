@@ -5,7 +5,6 @@ import { SliderOne } from "@/components/ui/slider";
 import { Spotlight } from "@/components/ui/spotlight";
 import Image from "next/image";
 import Link from "next/link";
-import { dancingScript } from "./layout";
 import TypewriterComponent from "typewriter-effect";
 import GraphicDesign from "./graphic-design";
 import WebsiteDesign from "./website-design";
@@ -14,6 +13,14 @@ import Brands from "./brands";
 import Services from "./services";
 import FAQS from "./faq";
 import { useRef } from "react";
+import { Dancing_Script } from "next/font/google";
+
+
+const dancingScript = Dancing_Script({ // Initialize Dancing Script
+  subsets: ["latin"],
+  weight: ["400", "700"], // Add multiple weights if needed
+});
+
 
 export default function Home() {
   const websiteDesignRef = useRef<HTMLDivElement>(null);

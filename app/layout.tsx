@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
-import { Poppins, Dancing_Script } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 
 const font = Poppins({ 
   subsets: ["latin"],
   weight: "400"
-});
-
-const dancingScript = Dancing_Script({ // Initialize Dancing Script
-  subsets: ["latin"],
-  weight: ["400", "700"], // Add multiple weights if needed
 });
 
 // export const metadata: Metadata = {
@@ -18,7 +13,6 @@ const dancingScript = Dancing_Script({ // Initialize Dancing Script
 // };
 
 // Export dancingScript to use in other components
-export { dancingScript };
 
 export default function RootLayout({
   children,
