@@ -4,6 +4,9 @@ import { InlineWidget } from "react-calendly";
 
 import Navbar from "@/components/navbar";
 
+// Use type assertion to tell TypeScript this is a string
+const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL as string;
+
 const Book = () => {
   return (
     <>
@@ -20,7 +23,7 @@ const Book = () => {
           Book a meeting
         </div>
 
-        <InlineWidget url="https://calendly.com/raymondolisa01/counseling" />
+        <InlineWidget url= {calendlyUrl} />
       </div>
     </>
   );

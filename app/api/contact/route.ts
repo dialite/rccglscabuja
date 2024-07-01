@@ -1,3 +1,8 @@
+import dotenv from "dotenv";
+
+// Load environment variables from .env file
+dotenv.config();
+
 import { NextResponse } from "next/server";
 
 import nodemailer from "nodemailer";
@@ -20,18 +25,18 @@ export async function POST(req: Request) {
 
 
       const transporter = nodemailer.createTransport({
-        host: "smtp.gmail.com",
-        port: 465,
+        host: process.env.SMTP_HOST,
+        port: parseInt(process.env.SMTP_PORT || "587"),
         secure: true,
         auth: {
-          user: "raymondolisa01@gmail.com",
+          user: process.env.SMTP_MAIL,
           pass: "odnf xwbm edqv yvfm",
         },
       });
 
       const mailOptions = {
         from: email,
-        to: "raymondolisa01@gmail.com",
+        to: process.env.SMTP_MAIL,
         subject: "Contact Form Submission",
         html: `
                     <h1>Contact Form</h1>
