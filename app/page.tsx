@@ -46,7 +46,8 @@ export default function Home() {
 
   const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
     if (ref.current) {
-      const offsetTop = ref.current.getBoundingClientRect().top + window.scrollY;
+      const offsetTop =
+        ref.current.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({ top: offsetTop, behavior: "smooth" });
     }
   };
@@ -75,9 +76,9 @@ export default function Home() {
           <TypewriterComponent
             options={{
               strings: [
-                "The Redeemed Christian Church of God.",
-                "Living Seed Church.",
-                "The Emerging Generation.",
+                `<span style="color: #ff4500;">The Redeemed Christian Church of God.</span>`,
+                `<span style="color: #1e90ff;">Living Seed Church.</span>`,
+                `<span style="color: #32cd32;">The Emerging Generation.</span>`,
               ],
               autoStart: true,
               loop: true,
@@ -109,26 +110,25 @@ export default function Home() {
 
         <div className="w-full pt-20">
           <SliderOne />
-          </div>
-          <div ref={websiteDesignRef}>
-            <WebsiteDesign />
-          </div>
+        </div>
+        <div ref={websiteDesignRef}>
+          <WebsiteDesign />
+        </div>
 
-          <div ref={graphicDesignRef}>
-            <GraphicDesign />
-          </div>
+        <div ref={graphicDesignRef}>
+          <GraphicDesign />
+        </div>
 
-          <div ref={shopifyStoresRef}>
-            <ShopifyStores />
-          </div>
+        <div ref={shopifyStoresRef}>
+          <ShopifyStores />
+        </div>
 
-          <div ref={brandsRef}>
-            <Brands />
-          </div>
+        <div ref={brandsRef}>
+          <Brands />
+        </div>
 
-          <Services />
-          <FAQS />
-        
+        <Services />
+        <FAQS />
       </div>
     </div>
   );
