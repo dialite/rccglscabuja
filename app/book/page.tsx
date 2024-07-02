@@ -5,7 +5,7 @@ import { InlineWidget } from "react-calendly";
 import Navbar from "@/components/navbar";
 
 // Use type assertion to tell TypeScript this is a string
-const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL as string;
+const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL || "";
 
 const Book = () => {
   return (

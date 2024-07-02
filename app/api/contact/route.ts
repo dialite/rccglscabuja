@@ -1,8 +1,3 @@
-import dotenv from "dotenv";
-
-// Load environment variables from .env file
-dotenv.config();
-
 import { NextResponse } from "next/server";
 
 import nodemailer from "nodemailer";
@@ -30,7 +25,7 @@ export async function POST(req: Request) {
         secure: true,
         auth: {
           user: process.env.SMTP_MAIL,
-          pass: "odnf xwbm edqv yvfm",
+          pass: process.env.SMTP_PASSWORD,
         },
       });
 

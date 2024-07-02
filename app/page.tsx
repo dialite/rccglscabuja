@@ -48,16 +48,19 @@ export default function Home() {
       />
       <Spotlight className="md:flex md:left-80 md;" fill="white" />
       <div className="p-4 mx-auto relative z-10 w-full pt-10 md:pt-20 px-2">
-        <div className="pb-10 text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-neutral-300 font-normal text-center mx-auto px-4" style={{ fontFamily: "var(--dancing-script)" }}>
+        <div
+          className={`pb-10 text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-neutral-300 font-normal text-center mx-auto px-4 ${dancingScript.className}`}
+        >
           <TypewriterComponent
             options={{
               strings: [
-                `<span style="color: #ff4500;">The Redeemed Christian Church of God.</span>`,
-                `<span style="color: #1e90ff;">Living Seed Church.</span>`,
-                `<span style="color: #32cd32;">The Emerging Generation.</span>`,
+                `<span style="font-family: 'Dancing Script', cursive; color: #ff4500;">The Redeemed Christian Church of God.</span>`,
+                `<span style="font-family: 'Dancing Script', cursive; color: #1e90ff;">Living Seed Church.</span>`,
+                `<span style="font-family: 'Dancing Script', cursive; color: #32cd32;">The Emerging Generation.</span>`,
               ],
               autoStart: true,
               loop: true,
+              // Enable HTML rendering for the strings
             }}
           />
         </div>
