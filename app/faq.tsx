@@ -34,7 +34,7 @@ const FAQS = () => {
             </AccordionTrigger>
             <AccordionContent className="text-sm md:text-base text-muted-foreground">
               Not at all! Come as you are. Whether you prefer formal or casual
-              attire, you're welcome here.
+              attire, you&apos;re welcome here.
             </AccordionContent>
           </AccordionItem>
 
