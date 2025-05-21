@@ -25,11 +25,19 @@ export default function Home() {
   const shopifyStoresRef = useRef<HTMLDivElement>(null);
   // const brandsRef = useRef<HTMLDivElement>(null);
 
+  const NAVBAR_HEIGHT = 80; // Adjust this value to your real navbar height
+
   const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
     if (ref.current) {
       const offsetTop =
-        ref.current.getBoundingClientRect().top + window.scrollY;
-      window.scrollTo({ top: offsetTop, behavior: "smooth" });
+        ref.current.getBoundingClientRect().top +
+        window.scrollY -
+        NAVBAR_HEIGHT;
+
+      window.scrollTo({
+        top: offsetTop,
+        behavior: "smooth",
+      });
     }
   };
 

@@ -14,10 +14,6 @@ A modern, responsive landing website for **RCCG Living Seed Church (LSC), Abuja*
 - [Getting Started](#getting-started)
   - [Installation](#installation)
   - [Running Locally](#running-locally)
-- [Project Structure](#project-structure)
-- [Core Functionality](#core-functionality)
-- [Customization Guide](#customization-guide)
-- [Contributing](#contributing)
 - [License](#license)
 
 ---

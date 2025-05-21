@@ -12,7 +12,7 @@ const GetInvolved = () => {
         // scrollToServices={() => {}}
       />
 
-      <div className="max-w-5xl mx-auto px-6 py-20 flex flex-col items-center text-center">
+      <div className="max-w-5xl mx-auto px-6 mt-12 py-20 flex flex-col items-center text-center">
         <h1 className="text-5xl font-semibold pb-10 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-500">
           Get Involved
         </h1>
