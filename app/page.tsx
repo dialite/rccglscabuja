@@ -8,7 +8,7 @@ import TypewriterComponent from "typewriter-effect";
 import GraphicDesign from "./graphic-design";
 import WebsiteDesign from "./website-design";
 import ShopifyStores from "./shopify-storms";
-import Brands from "./brands";
+// import Brands from "./brands";
 import Services from "./services";
 import FAQS from "./faq";
 import { useRef } from "react";
@@ -23,7 +23,7 @@ export default function Home() {
   const websiteDesignRef = useRef<HTMLDivElement>(null);
   const graphicDesignRef = useRef<HTMLDivElement>(null);
   const shopifyStoresRef = useRef<HTMLDivElement>(null);
-  const brandsRef = useRef<HTMLDivElement>(null);
+  // const brandsRef = useRef<HTMLDivElement>(null);
 
   const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
     if (ref.current) {
@@ -36,7 +36,7 @@ export default function Home() {
   const scrollToWebsiteDesign = () => scrollToSection(websiteDesignRef);
   const scrollToGraphicDesign = () => scrollToSection(graphicDesignRef);
   const scrollToShopifyStores = () => scrollToSection(shopifyStoresRef);
-  const scrollToBrands = () => scrollToSection(brandsRef);
+  // const scrollToBrands = () => scrollToSection(brandsRef);
 
   return (
     <div className="w-full md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
@@ -44,10 +44,10 @@ export default function Home() {
         scrollToWebsiteDesign={scrollToWebsiteDesign}
         scrollToGraphicDesign={scrollToGraphicDesign}
         scrollToShopifyStores={scrollToShopifyStores}
-        scrollToBrands={scrollToBrands}
+        // scrollToBrands={scrollToBrands}
       />
       <Spotlight className="md:flex md:left-80 md;" fill="white" />
-      <div className="p-4 mx-auto relative z-10 w-full pt-10 md:pt-20 px-2">
+      <div className="pt-16 mt-40 p-6 mx-auto relative z-10 w-full px-2 md:pt-20">
         <div
           className={`pb-10 text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-neutral-300 font-normal text-center mx-auto px-4 ${dancingScript.className}`}
         >
@@ -68,10 +68,10 @@ export default function Home() {
           DISCOVER <br /> TO BE <br /> DISCOVERED
         </div>
         <p className="mt-4 text-lg font-normal text-neutral-300 max-w-lg text-center mx-auto px-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          eu nibh urna. Nunc vel finibus lacus, sed gravida risus. Quisque sit
-          amet finibus odio. Curabitur accumsan at elit in efficitur. Etiam
-          euismod libero nec elit dapibus interdum.
+          We are the light of the world, a city set on a hill that cannot be
+          hidden. Anchored in God’s Word, we rise with bold faith, unshaken in
+          spirit. Together, we shine His truth and love in a world in need of
+          hope.
         </p>
         <Link
           href={"/book"}
@@ -91,9 +91,9 @@ export default function Home() {
         <div ref={shopifyStoresRef}>
           <ShopifyStores />
         </div>
-        <div ref={brandsRef}>
+        {/* <div ref={brandsRef}>
           <Brands />
-        </div>
+        </div> */}
         <Services />
         <FAQS />
       </div>

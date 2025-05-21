@@ -1,164 +1,88 @@
 "use client";
 
-import { useState } from "react";
-
-import Link from "next/link";
-
-import { PiCheckCircleFill } from "react-icons/pi";
-
 import Navbar from "@/components/navbar";
 
-const plans = [
-  {
-    index: 0,
-    name: "Basic",
-    price: " US $499",
-    features: [
-      "Fully responsive on all screens",
-
-      "Design + Development",
-
-      "Private communication channel",
-      "1-3 days turnaround time",
-    ],
-    style:
-      " rounded-3xl  py-10 bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-50",
-    description:
-      "Standalone components tailored to your needs and easily integrated. Perfect for website elements or sections.",
-    button: "Buy Now",
-  },
-  {
-    index: 1,
-    name: "Premium",
-    price: "US $1299",
-    features: [
-      "Fully responsive on all screens",
-      "React / Next.js / Tailwind CSS code",
-      "Design + Development",
-      "24-hour support response time",
-      "Private communication channel",
-      "3-5 days turnaround time",
-    ],
-    style:
-      " rounded-3xl  py-10 bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-50",
-    description:
-      "Best for early-stage startups, businesses, and freelancers that need a marketing side to showcase their work and vision.",
-    button: "Buy Now",
-  },
-  {
-    index: 2,
-    name: "Enterprise",
-    feature: "Contact Us",
-    price: "Let's Talk!",
-    features: [
-      "Fully responsive on all screens",
-      "React / Next.js / Tailwind CSS code",
-      "Design + Development",
-      "Unlimited Revisions",
-      "24-hour support response time",
-      "Private communication channel",
-      "Priority Development Queue",
-      "Dedicated Project Manager",
-    ],
-    style:
-      " h-full rounded-3xl py-10 flex flex-col  bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-50  ",
-    description:
-      "Best for small businesses and startups that need a performant website that looks great and converts visitors to customers.",
-    button: "Contact Us",
-  },
-];
-
-const Pricing = () => {
-  return ( 
-    <div className="w-full  md:items-center md:justify-center
-     bg-black/[0.96] antialiased 
-     bg-grid-white/[0.02] relative overflow-hidden">
-
-<Navbar
-             scrollToWebsiteDesign={() => {}}
-             scrollToGraphicDesign={() => {}}
-             scrollToShopifyStores={() => {}}
-             scrollToBrands={() => {}}
-            //   scrollToServices={() => {}}
+const GetInvolved = () => {
+  return (
+    <div className="w-full bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden text-slate-300">
+      <Navbar
+        scrollToWebsiteDesign={() => {}}
+        scrollToGraphicDesign={() => {}}
+        scrollToShopifyStores={() => {}}
+        // scrollToServices={() => {}}
       />
 
-<div className="flex items-center justify-center flex-col   ">
-          <div className="text-5xl pb-10 md:pb-20 text-slate-300 px-6 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-500 bg-opacity-50">
-            Simple Pricing <br /> Choose your plan
+      <div className="max-w-5xl mx-auto px-6 py-20 flex flex-col items-center text-center">
+        <h1 className="text-5xl font-semibold pb-10 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-500">
+          Get Involved
+        </h1>
+
+        <p className="text-lg max-w-3xl mb-12">
+          We believe every member of our church family has a unique role to
+          play. Whether through volunteering, joining a ministry, attending
+          events, or simply praying, there are many ways to grow, serve, and
+          connect.
+        </p>
+
+        <div className="grid md:grid-cols-3 gap-10 w-full">
+          <div className="bg-gradient-to-b from-neutral-800 to-neutral-900 rounded-3xl p-8 shadow-lg">
+            <h2 className="text-2xl font-semibold mb-4">Volunteer</h2>
+            <p className="mb-6">
+              Help serve our community through various volunteer opportunities
+              in worship, outreach, hospitality, and more.
+            </p>
+            <a
+              href="/volunteer"
+              className="inline-block px-6 py-3 rounded-full bg-emerald-600 text-white hover:bg-emerald-700 transition"
+            >
+              Learn More
+            </a>
           </div>
-          <div className="grid md:grid-cols-3 gap-6 px-6 md:w-4/5 2xl:w-3/4 cursor-pointer pb-20  items-start ">
-            {plans.map((plan, index) => (
-              <div
-                key={plan.name}
-                className="h-full flex flex-col justify-between border rounded-3xl px-6  "
-              >
-                <div className={plan.style}>
-                  <div className="text-4xl flex  items-center font-medium">
-                    {plan.name}
-                    {/* render feature tag only for enterprise tab*/}
-                    {plan.feature === "Contact Us" && (
-                      <div className="text-sm font-medium text-blue-600 bg-blue-100 px-2 py-1 rounded-full ml-4 items-center ">
-                        Contact Us
-                      </div>
-                    )}
-                  </div>
-                  <div className="text-3xl pt-6 ">{plan.price}</div>
-                  <div className="py-6">{plan.description}</div>
 
-                  <ul>
-                    {plan.features.map((feature) => (
-                      <li
-                        key={feature}
-                        className="text-lg  py-2 flex space-x-2 items-center"
-                      >
-                        {/* render checkmark only for enterprise tab*/}
-                        {plan.feature === "Contact Us" ? (
-                          <PiCheckCircleFill className="text-blue-400 mr-2 text-xl" />
-                        ) : (
-                          <PiCheckCircleFill className="text-green-600 mr-2 text-xl" />
-                        )}
+          <div className="bg-gradient-to-b from-neutral-800 to-neutral-900 rounded-3xl p-8 shadow-lg">
+            <h2 className="text-2xl font-semibold mb-4">Join a Ministry</h2>
+            <p className="mb-6">
+              Connect with others by joining a ministry team that fits your
+              passions—music, youth, prayer, or community service.
+            </p>
+            <a
+              href="/ministries"
+              className="inline-block px-6 py-3 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition"
+            >
+              Explore Ministries
+            </a>
+          </div>
 
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className={plan.button}>
-                  {index === 0 && (
-                    <Link
-                      href="https://buy.stripe.com/6oEg1WdsibFr1EYbIK"
-                      className="rounded-3xl my-4  py-2 text-white w-full mx-auto items-center flex justify-center bg-gradient-to-r from-emerald-500 to-blue-300"
-                    >
-                      Buy Now
-                    </Link>
-                  )}
-                    {index === 1 && (
-                      <Link
-                        
-                        href="https://buy.stripe.com/14k2b65ZQ8tf5Ve28c"  
-                        className="rounded-3xl my-4  py-2 text-white w-full mx-auto items-center flex justify-center bg-gradient-to-r from-emerald-500 to-blue-300" 
-                      >
-                        Buy Now
-                        </Link>
-                    )}
-                    {index === 2 && (
-
-                          <Link
-                          href="/contact"
-                          className="rounded-3xl my-4  py-2 text-white w-full mx-auto items-center flex justify-center bg-gradient-to-r from-purple-500 to-blue-300"
-                        >
-                          Contact Us
-                        </Link>
-                    )}  
-                </div>
-              </div>
-            ))}
+          <div className="bg-gradient-to-b from-neutral-800 to-neutral-900 rounded-3xl p-8 shadow-lg">
+            <h2 className="text-2xl font-semibold mb-4">Attend Events</h2>
+            <p className="mb-6">
+              Participate in upcoming church events, workshops, and community
+              gatherings designed to inspire and bring us together.
+            </p>
+            <a
+              href="/events"
+              className="inline-block px-6 py-3 rounded-full bg-purple-600 text-white hover:bg-purple-700 transition"
+            >
+              See Events
+            </a>
           </div>
         </div>
 
-  </div>
-  )
+        <div className="mt-16 max-w-3xl">
+          <h3 className="text-3xl font-semibold mb-6">Prayer Support</h3>
+          <p className="mb-4">
+            Our pastoral team and prayer warriors are here to support you.
+            Request a prayer session or submit prayer requests anytime through
+            our
+            <a href="/contact" className="text-emerald-400 underline ml-1">
+              contact page
+            </a>
+            .
+          </p>
+        </div>
+      </div>
+    </div>
+  );
 };
 
-export default Pricing;
+export default GetInvolved;

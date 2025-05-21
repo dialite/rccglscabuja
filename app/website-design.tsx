@@ -3,147 +3,44 @@ import Image from "next/image";
 const WebsiteDesign = () => {
   return (
     <div>
+      {/* Hero Section */}
       <div className="p-4 mx-auto relative z-10 w-full pt-10 md:pt-20 px-2">
         <div
           className="text-6xl pb-5 md:text-7xl px-10 text-center bg-clip-text text-transparent 
             bg-gradient-to-b from-purple-500 to-sky-200 bg-opacity-50"
         >
-          Website Design <br /> that works
+          Built on Faith, <br /> Rooted in Christ
         </div>
         <p className="mt-4 text-lg font-normal text-neutral-300 max-w-lg text-center mx-auto px-4">
-          We are a team of creatives who are excited to help you grow your
-          business
+          A house of truth, hope, and transformation — where every heart finds
+          purpose and every soul meets grace.
         </p>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-10">
-        <div className="grid gap-4">
-          <div>
+
+      {/* 6-Image Grid Section */}
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-3 px-4 py-10 max-w-5xl mx-auto">
+        {[
+          "/images/building.jpg",
+          "/images/family.jpg",
+          "/images/congre.png",
+          "/images/members.jpg",
+          "/images/family.jpg",
+          "/images/members.jpg",
+        ].map((src, index) => (
+          <div
+            key={index}
+            className="relative aspect-[4/3] md:aspect-square w-full rounded-lg overflow-hidden shadow-md"
+          >
             <Image
-              width={500}
-              height={500}
+              src={src}
+              alt={`Gallery image ${index + 1}`}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 33vw"
               priority
-              className="h-auto max-w-full rounded-lg"
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
-              alt=""
             />
           </div>
-          <div>
-            <Image
-              width={500}
-              height={500}
-              priority
-              className="h-auto max-w-full rounded-lg"
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg"
-              alt=""
-            />
-          </div>
-          <div>
-            <Image
-              width={500}
-              height={500}
-              priority
-              className="h-auto max-w-full rounded-lg"
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg"
-              alt=""
-            />
-          </div>
-        </div>
-        <div className="grid gap-4">
-          <div>
-            <Image
-              width={500}
-              height={500}
-              priority
-              className="h-auto max-w-full rounded-lg"
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg"
-              alt=""
-            />
-          </div>
-          <div>
-            <Image
-              width={500}
-              height={500}
-              priority
-              className="h-auto max-w-full rounded-lg"
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg"
-              alt=""
-            />
-          </div>
-          <div>
-            <Image
-              width={500}
-              height={500}
-              priority
-              className="h-auto max-w-full rounded-lg"
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg"
-              alt=""
-            />
-          </div>
-        </div>
-        <div className="grid gap-4">
-          <div>
-            <Image
-              width={500}
-              height={500}
-              priority
-              className="h-auto max-w-full rounded-lg"
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg"
-              alt=""
-            />
-          </div>
-          <div>
-            <Image
-              width={500}
-              height={500}
-              priority
-              className="h-auto max-w-full rounded-lg"
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg"
-              alt=""
-            />
-          </div>
-          <div>
-            <Image
-              width={500}
-              height={500}
-              priority
-              className="h-auto max-w-full rounded-lg"
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg"
-              alt=""
-            />
-          </div>
-        </div>
-        <div className="grid gap-4">
-          <div>
-            <Image
-              width={500}
-              height={500}
-              priority
-              className="h-auto max-w-full rounded-lg"
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg"
-              alt=""
-            />
-          </div>
-          <div>
-            <Image
-              width={500}
-              height={500}
-              priority
-              className="h-auto max-w-full rounded-lg"
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg"
-              alt=""
-            />
-          </div>
-          <div>
-            <Image
-              width={500}
-              height={500}
-              priority
-              className="h-auto max-w-full rounded-lg"
-              src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg"
-              alt=""
-            />
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
