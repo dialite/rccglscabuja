@@ -105,7 +105,7 @@ export default function ChurchContactForm() {
         scrollToWebsiteDesign={() => {}}
         scrollToGraphicDesign={() => {}}
         scrollToShopifyStores={() => {}}
-        // scrollToBrands={() => {}}
+        scrollToBrands={() => {}}
         // scrollToServices={() => {}}
       />
 

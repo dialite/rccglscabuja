@@ -11,7 +11,7 @@ interface NavbarProps {
   scrollToWebsiteDesign: () => void;
   scrollToGraphicDesign: () => void;
   scrollToShopifyStores: () => void;
-  // scrollToBrands?: () => void;
+  scrollToBrands?: () => void;
 }
 
 export default function Navbar({
