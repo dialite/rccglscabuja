@@ -2,7 +2,8 @@
 
 A modern, responsive landing website for **RCCG Living Seed Church (LSC), Abuja**, designed using **Next.js**, **React**, and **Tailwind CSS**. This project emphasizes a beautiful user interface with dynamic scroll-based navigation, responsive mobile support, and a modular layout structure built for speed, accessibility, and future scalability.
 
-> 🔗 **Live Repository**: [https://github.com/dialite/rccglscabuja](https://github.com/dialite/rccglscabuja)
+> 🔗 **Live Website**: [https://rccglscabuja.vercel.app](https://rccglscabuja.vercel.app)  
+> 📂 **Repository**: [https://github.com/dialite/rccglscabuja](https://github.com/dialite/rccglscabuja)
 
 ---
 
