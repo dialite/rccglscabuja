@@ -50,7 +50,7 @@ A modern, responsive landing website for **RCCG Living Seed Church (LSC), Abuja*
 | Styling     | Tailwind CSS     |
 | Icons       | Lucide React     |
 | Images      | next/image       |
-| Package Mgr | pnpm (preferred) |
+| Package Mgr | npm (preferred) |
 
 ---
 
