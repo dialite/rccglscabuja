@@ -1,5 +1,12 @@
 import { HoverEffect } from "@/components/ui/card-hover-effect";
-import { PiAppStoreLogo, PiHeadsetFill, PiLock, PiMegaphone, PiMonitor, PiStorefront } from "react-icons/pi";
+import {
+  PiChurch,
+  PiUsersThree,
+  PiBooks,
+  PiHeart,
+  PiMusicNotes,
+  PiHandsPraying,
+} from "react-icons/pi";
 
 export function CardHoverEffectDemo() {
   return (
@@ -8,47 +15,72 @@ export function CardHoverEffectDemo() {
     </div>
   );
 }
+
 export const projects = [
   {
-    icon: <div className="bg-blue-100 p-4 rounded-full"><PiMonitor className="w-8 h-8 text-blue-600" /></div>,
-    title: "Stripe",
+    icon: (
+      <div className="bg-blue-100 p-4 rounded-full">
+        <PiChurch className="w-8 h-8 text-blue-600" />
+      </div>
+    ),
+    title: "Sunday Worship",
     description:
-      "A technology company that builds economic infrastructure for the internet.",
-    link: "https://stripe.com",
+      "Join us every Sunday as we come together to worship, pray, and hear God’s word in a loving and welcoming environment.",
+    link: "#worship",
   },
   {
-    icon: <div className="bg-blue-100 p-4 rounded-full"><PiAppStoreLogo className="w-8 h-8 text-blue-600" /></div>,
-    title: "Netflix",
+    icon: (
+      <div className="bg-blue-100 p-4 rounded-full">
+        <PiUsersThree className="w-8 h-8 text-blue-600" />
+      </div>
+    ),
+    title: "Youth Ministry",
     description:
-      "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
-    link: "https://netflix.com",
+      "Empowering the next generation through Bible study, mentorship, and fun-filled faith-based activities for teens and young adults.",
+    link: "#youth",
   },
   {
-    icon: <div className="bg-blue-100 p-4 rounded-full"><PiHeadsetFill className="w-8 h-8 text-blue-600" /></div>,
-    title: "Google",
+    icon: (
+      <div className="bg-blue-100 p-4 rounded-full">
+        <PiBooks className="w-8 h-8 text-blue-600" />
+      </div>
+    ),
+    title: "Bible Study",
     description:
-      "A multinational technology company that specializes in Internet-related services and products.",
-    link: "https://google.com",
+      "Deepen your understanding of the Scriptures through our weekly Bible study groups for all ages.",
+    link: "#biblestudy",
   },
   {
-    icon: <div className="bg-blue-100 p-4 rounded-full"><PiLock className="w-8 h-8 text-blue-600" /></div>,
-    title: "Meta",
+    icon: (
+      <div className="bg-blue-100 p-4 rounded-full">
+        <PiHeart className="w-8 h-8 text-blue-600" />
+      </div>
+    ),
+    title: "Community Outreach",
     description:
-      "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
-    link: "https://meta.com",
+      "Serving the community through acts of kindness, food drives, medical missions, and charitable events.",
+    link: "#outreach",
   },
   {
-    icon: <div className="bg-blue-100 p-4 rounded-full"><PiStorefront className="w-8 h-8 text-blue-600" /></div>,
-    title: "Amazon",
+    icon: (
+      <div className="bg-blue-100 p-4 rounded-full">
+        <PiMusicNotes className="w-8 h-8 text-blue-600" />
+      </div>
+    ),
+    title: "Music Ministry",
     description:
-      "A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
-    link: "https://amazon.com",
+      "Lifting hearts in praise through anointed worship, choirs, and instrumental music. All are welcome to join.",
+    link: "#music",
   },
   {
-    icon: <div className="bg-blue-100 p-4 rounded-full"><PiMegaphone className="w-8 h-8 text-blue-600" /></div>,
-    title: "Microsoft",
+    icon: (
+      <div className="bg-blue-100 p-4 rounded-full">
+        <PiHandsPraying className="w-8 h-8 text-blue-600" />
+      </div>
+    ),
+    title: "Prayer & Counseling",
     description:
-      "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
-    link: "https://microsoft.com",
+      "Receive spiritual guidance, emotional support, and prayer from our caring pastoral team and prayer warriors.",
+    link: "#prayer",
   },
 ];
